@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submit Form</title>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap Link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="display-2 text-center primary-color mt-3">Livia</h1>
+    <p class="text-secondary text-center primary-color text-capitalize">contact us</p>
+    <form method="POST" action="./thanks.html" onsubmit="return neverEmpty(e);" class="main-form needs-validation mt-4 my-4">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" required>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control">
+            <div class="invalid-feedback text-muted">Please enter a valid username</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Enter password </label>
+            <input type="password" name="password" id="password" placeholder="X!oop?qw " class="form-control" oninput="validateP()" required>
+            <label for="" id="pid" style="display: none" ></label>
+        </div>
+        <div class="form-group">
+            <label for="passwordConfirm">Re-enter password</label>
+            <input type="password" name="password" id="passwordConfirm" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Enter your email-id</label>
+            <input type="text" name="email" id="email" class="form-control" oninput="validateE()" required >
+            <label for="" id="eid" style="display: none"></label>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Enter number</label>
+            <div class="row">
+                <div class="col-1 text-center p-2">+1</div>
+                <div class="col"><input type="number" name="mobile" id="mobile" class="form-control" oninput="validateM()" required></div>
+            </div>
+            <label for="" id="mno" style="display: none" >Valid</label>
+        </div>
+        <div class="form-group">
+            <label for="gender">Select your gender</label>
+            <select name="gender" id="gender" class="form-control" required>
+                <option value="select" disabled selected>Select a gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" id="accept-terms" class="form-check-input" required>
+            <label for="accept-terms" class="text-capitalize form-check-label">Accept terms &amp; conditions</label>
+        </div>
+        <div class="form-group pt-2 m-2">
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="border rounded btn btn-outline-success primary-color form-control">Submit</button>
+                </div>
+                <div class="col">
+                    <button type="submit" onclick="window.location.href='../index.html'" class="border rounded btn btn-outline-success primary-color form-control">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="./formScript.js"></script>
+
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+    <script>
+        bootstrapValidate('#passwordConfirm','matches: #password: Your password should match || matched')
+    </script>
+
+</body>
+</html>
