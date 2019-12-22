@@ -301,7 +301,7 @@ header .site-title{
 .slider-client{
     width: 100%;
     height: 100%;
-    background: url('../assets/cup-desk-drink-434337.jpg');
+    background: url('../assets/customer_review.jpg');
     background-size: cover;
     padding: 8% 0;
     overflow: hidden;
@@ -310,7 +310,7 @@ header .site-title{
 .slider-box{
     width: 80%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.350);
+    background: rgba(255, 255, 255, 0.822);
     margin: auto;
     border-radius: 0.4rem;
 }
@@ -323,7 +323,7 @@ header .site-title{
 }
 
 #wocs{
-    background-color: rgba(255, 255, 255, 0.550);
+    background-color: rgba(133, 133, 133, 0.466);
 }
 
 .site-info{
