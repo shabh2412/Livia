@@ -30,11 +30,29 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 col-12">
                 <div class="btn-group">
-                    <button class="btn border dropdown-toggle my-md-4 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                    <button class="btn border dropdown-toggle my-md-4 text-white" data-toggle="dropdown" aria-haspopup="true" id="cont" aria-expanded="false">USA</button>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">EUR - Euro</a>
-                        <a href="#" class="dropdown-item">AED - Dihrams</a>
-                        <a href="#" class="dropdown-item">INR - Indian Rupees</a>
+                        <a href="#" id="c1" class="dropdown-item" onclick="f1()">IND - INDIA</a>
+                        <script>
+                            var x = 3;
+                            function f1(){
+                                if(x%2!=0){
+                                    document.getElementById("cont").innerHTML = "IND";
+                                    document.getElementById("c1").innerHTML = "USA - UNITED STATES OF AMERICA";
+                                    x+=1;
+                                }
+                                else{
+                                    document.getElementById("cont").innerHTML = "USA";
+                                    document.getElementById("c1").innerHTML = "IND - INDIA";
+                                    x+=1;
+                                }
+                                if(x==5){
+                                    x=1;
+                                }
+                            }
+                        </script>
+                        <a href="#" class="dropdown-item">UAE - UNITED ARAB EMIRATES</a>
+                        <a href="#" class="dropdown-item">AUS - AUSTRALIA</a>
                     </div>
                 </div>
             </div>
